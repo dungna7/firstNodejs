@@ -1,17 +1,16 @@
-class person {
-  getAge (age) {
-    let countDownDate = new Date(age)
-    countDownDate = countDownDate.getFullYear()
+class Person {
+    getAge(age) {
+        let countDownDate = new Date(age)
+        countDownDate = countDownDate.getFullYear()
 
-    if (Number.isNaN(countDownDate)) {
-	  return 'fail'
-    } else {
-      // Get todays date and time
-      let now = new Date().getFullYear()
-      let year = Math.floor(now - countDownDate)
-      console.log(countDownDate)
-      return year
+        if (Number.isNaN(countDownDate)) {
+            return false
+        } else {
+            // Get todays date and time
+            let now = new Date().getFullYear()
+            let year = Math.floor(now - countDownDate)
+            return year
+        }
     }
-  }
 }
-module.exports = new person()
+module.exports = new Person()
